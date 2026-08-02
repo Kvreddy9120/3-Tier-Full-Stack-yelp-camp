@@ -4,13 +4,22 @@ metadata:
   name: yelp-camp-deployment
 spec:
   replicas: 2
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+
   selector:
     matchLabels:
       app: yelp-camp
+
   template:
     metadata:
       labels:
         app: yelp-camp
+
     spec:
       affinity:
         podAntiAffinity:
@@ -23,6 +32,7 @@ spec:
       containers:
         - name: yelp-camp-container
           image: shaikmustafa/finalcamp:v1
+
           ports:
             - containerPort: 3000
 
