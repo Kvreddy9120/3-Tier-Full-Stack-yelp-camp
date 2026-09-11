@@ -31,7 +31,7 @@ spec:
 
       containers:
         - name: yelp-camp-container
-          image: kvreddy9120/camp:13
+          image: kvreddy9120/camp:14
 
           ports:
             - containerPort: 3000
