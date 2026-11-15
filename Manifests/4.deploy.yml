@@ -31,7 +31,7 @@ spec:
 
       containers:
         - name: yelp-camp-container
-          image: kvreddy9120/camp:16
+          image: 362702902929.dkr.ecr.us-east-1.amazonaws.com/myrepo:latest
 
           ports:
             - containerPort: 3000
